@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 90" width="100%" height="100%" style="display:block;">
+  <defs>
+    <!-- Blue spiral -->
+    <path id="blue-swirl" d="M 45 45 C 45 28.43 31.57 15 15 15 C 31.57 15 45 28.43 45 45 C 45 61.57 58.43 75 75 75 C 58.43 75 45 61.57 45 45 Z" />
+  </defs>
+  <!-- Taegeuk Mark -->
+  <g id="taegeuk">
+    <!-- Red top swirl -->
+    <path d="M 45,45 A 25,25 0 0,0 45,9.5 A 35.5,35.5 0 0,0 12,45 A 19.5,19.5 0 0,1 45,45 Z" fill="#0047a0"/>
+    <path d="M 45,45 A 25,25 0 0,0 45,80.5 A 35.5,35.5 0 0,0 78,45 A 19.5,19.5 0 0,1 45,45 Z" fill="#cd2e3a"/>
+    <path d="M 45,10 C 64.33,10 80,25.67 80,45 C 80,56 74,65 65.5,70.5 C 73,63 76,52 72,42 C 67,29 53,23 41,27 C 32,30 26,38 25,47 C 24,37 31,10 45,10 Z" fill="#cd2e3a"/>
+    <path d="M 45,80 C 25.67,80 10,64.33 10,45 C 10,34 16,25 24.5,19.5 C 17,27 14,38 18,48 C 23,61 37,67 49,63 C 58,60 64,52 65,43 C 66,53 59,80 45,80 Z" fill="#0047a0"/>
+  </g>
+  <!-- Korean Government Official Standard Typography: 농림축산식품부 -->
+  <g id="wordmark" class="logo-text">
+    <text x="100" y="49" font-family="'Pretendard', 'Noto Sans KR', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif" font-size="28" font-weight="800" letter-spacing="-0.5px" fill="currentColor">
+      농림축산식품부
+    </text>
+    <text x="102" y="70" font-family="'Pretendard', 'Noto Sans KR', 'Segoe UI', sans-serif" font-size="11" font-weight="600" letter-spacing="0.5px" fill="var(--text-muted, #64748b)">
+      MINISTRY OF AGRICULTURE, FOOD AND RURAL AFFAIRS
+    </text>
+  </g>
+</svg>

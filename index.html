@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>농림축산식품부 주요 업무 포털 | 농식품 한눈에 알기</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header / Navigation (Fixed Top Always) -->
+  <header class="header" id="mainHeader">
+    <div class="nav-container">
+      <div class="logo-wrapper">
+        <a href="#" class="official-logo" aria-label="농림축산식품부 홈">
+          <!-- 대한민국 정부 공식 상징 태극 + 부처 명칭 SVG -->
+          <svg class="official-symbol" viewBox="0 0 420 70" xmlns="http://www.w3.org/2000/svg">
+            <!-- 정부상징 태극 심볼 -->
+            <g transform="translate(10, 5) scale(0.65)">
+              <circle cx="45" cy="45" r="42" fill="none" />
+              <!-- 상단 적색 문양 -->
+              <path d="M45,4 C22.9,4 5,21.9 5,44 C5,51.8 7.3,59.1 11.2,65.2 C12.8,55.5 17.5,47.2 24.8,41.5 C34.2,34.2 47.9,34.8 56.6,42.8 C62.8,48.5 65.5,57.1 64.2,65.6 C76.5,59.4 85,46.7 85,32 C85,16.5 72.5,4 57,4 C53,4 49,4 45,4 Z" fill="#cd2e3a"/>
+              <!-- 하단 청색 문양 -->
+              <path d="M45,86 C67.1,86 85,68.1 85,46 C85,38.2 82.7,30.9 78.8,24.8 C77.2,34.5 72.5,42.8 65.2,48.5 C55.8,55.8 42.1,55.2 33.4,47.2 C27.2,41.5 24.5,32.9 25.8,24.4 C13.5,30.6 5,43.3 5,58 C5,73.5 17.5,86 33,86 C37,86 41,86 45,86 Z" fill="#0047a0"/>
+            </g>
+            <!-- 공식 폰트 워드마크 국문 및 영문 -->
+            <text x="82" y="38" class="logo-title" font-family="'Pretendard', 'Noto Sans KR', 'Malgun Gothic', sans-serif" font-weight="800" font-size="24" letter-spacing="-0.5px">농림축산식품부</text>
+            <text x="84" y="55" class="logo-eng" font-family="'Segoe UI', Roboto, sans-serif" font-weight="600" font-size="9.5" letter-spacing="0.3px">MINISTRY OF AGRICULTURE, FOOD AND RURAL AFFAIRS</text>
+          </svg>
+        </a>
+      </div>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#services" class="nav-link active"><i class="fa-solid fa-wheat-awn"></i> 주요 핵심 업무</a>
+        <a href="#interactive-finder" class="nav-link"><i class="fa-solid fa-wand-magic-sparkles"></i> 맞춤 혜택 찾기</a>
+        <a href="#stats" class="nav-link"><i class="fa-solid fa-chart-simple"></i> 숫자로 보는 농식품</a>
+        <a href="#faq" class="nav-link"><i class="fa-solid fa-circle-question"></i> 자주 묻는 질문</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Night / Dark Mode Toggle Button -->
+        <button id="themeToggle" class="theme-toggle" aria-label="야간 모드 전환" title="야간 / 주간 모드 전환">
+          <i class="fa-solid fa-moon"></i>
+          <span class="theme-text">야간 모드</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Autumn Warm Atmosphere) -->
+  <section class="hero">
+    <div class="autumn-leaves" aria-hidden="true">
+      <span class="leaf leaf-1"><i class="fa-solid fa-leaf"></i></span>
+      <span class="leaf leaf-2"><i class="fa-solid fa-leaf"></i></span>
+      <span class="leaf leaf-3"><i class="fa-solid fa-leaf"></i></span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fa-solid fa-sun"></i> 풍요로운 가을 수확의 기쁨 · 국민과 함께하는 농정</div>
+      <h2>황금빛 들녘에서 건강한 우리 식탁까지,<br><span>농림축산식품부</span>가 정성을 다합니다</h2>
+      <p>수확의 계절 가을처럼 풍성한 농식품부의 지원 정책과 주요 업무를 알기 쉽게 전해드립니다.</p>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="keywordSearch" placeholder="궁금한 업무나 키워드를 입력해 보세요 (예: 쌀, 가을 수확, 청년농, 반려견, 할인)">
+        <button id="searchBtn">검색</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Filter Pills -->
+  <section class="filter-section">
+    <div class="container">
+      <div class="filter-header">
+        <h3>관심 분야별로 모아보기</h3>
+        <p>원하는 카테고리를 클릭하면 관련 업무만 빠르게 확인하실 수 있습니다.</p>
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active" data-category="all">전체보기</button>
+        <button class="chip" data-category="food-security"><i class="fa-solid fa-bowl-rice"></i> 식량안보 & 쌀</button>
+        <button class="chip" data-category="smart-ag"><i class="fa-solid fa-robot"></i> 스마트농업 & 청년농</button>
+        <button class="chip" data-category="animal-welfare"><i class="fa-solid fa-paw"></i> 동물복지 & 축산</button>
+        <button class="chip" data-category="safe-food"><i class="fa-solid fa-apple-whole"></i> 안전한 먹거리 & 물가안정</button>
+        <button class="chip" data-category="rural-life"><i class="fa-solid fa-mountain-sun"></i> 살기 좋은 농촌 & 힐링</button>
+        <button class="chip" data-category="k-food"><i class="fa-solid fa-earth-asia"></i> K-Food 수출 진흥</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Services Cards -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="cards-grid" id="cardsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Citizen Benefit Finder -->
+  <section class="interactive-section" id="interactive-finder">
+    <div class="container">
+      <div class="interactive-box">
+        <div class="interactive-header">
+          <span class="badge-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> 맞춤 정책 시뮬레이터</span>
+          <h2>당신에게 딱 맞는 농식품부 지원 정책은?</h2>
+          <p>현재 본인의 상황을 선택하시면 가을철 유용한 지원 정책과 혜택을 추천해 드립니다.</p>
+        </div>
+        
+        <div class="selector-group">
+          <label for="userRole">나는 현재:</label>
+          <select id="userRole">
+            <option value="consumer">식탁 물가와 안전한 먹거리가 관심사인 일반 소비자/주부</option>
+            <option value="youth">농업 창업과 귀농귀촌을 꿈꾸는 청년/예비 창업가</option>
+            <option value="pet-owner">반려동물(반려견/묘)과 함께 생활하는 반려인</option>
+            <option value="farmer">수확과 영농에 종사하는 농업인 및 축산 농가</option>
+            <option value="traveler">가을 단풍과 농촌 체험 및 힐링 여행을 떠나고 싶은 시민</option>
+          </select>
+          <button id="findBenefitBtn" class="btn-primary"><i class="fa-solid fa-check"></i> 추천 혜택 보기</button>
+        </div>
+
+        <div class="recommendation-result" id="recommendationResult">
+          <!-- Dynamic Content -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infographic / Numbers -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <h2 class="section-title">숫자로 보는 대한민국 농식품부</h2>
+      <p class="section-desc">국민의 일상을 풍요롭게 가꾸는 의미 있는 결실들입니다.</p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-plane-departure"></i></div>
+          <div class="stat-num" data-target="100">0</div>
+          <div class="stat-unit">억 달러 돌파</div>
+          <p class="stat-label">K-Food 농수산식품 역대 수출액</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-tractor"></i></div>
+          <div class="stat-num" data-target="30000">0</div>
+          <div class="stat-unit">명 육성 중</div>
+          <p class="stat-label">청년 창업농 육성 목표</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="stat-num" data-target="350">0</div>
+          <div class="stat-unit">만 가구 등록</div>
+          <p class="stat-label">반려동물 등록제 확대 가구</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+          <div class="stat-num" data-target="99">0</div>
+          <div class="stat-unit">% 공급 안정화</div>
+          <p class="stat-label">국민 주식 쌀 수확기 비축 및 수급 관리</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title">알아두면 유익한 FAQ</h2>
+      <p class="section-desc">일반 시민분들이 가장 많이 궁금해하는 질문을 모았습니다.</p>
+      
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Q. 농축산물 할인지원 쿠폰은 어떻게 발급받아 쓰나요?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>전통시장, 대형마트, 중소형 마트, 온라인몰 등에서 국산 신선 채소·과일·육류 구매 시 자동으로 20~30% 할인(1인당 주당 한도 내)이 적용되는 ‘농축산물 할인지원’ 사업입니다. 별도 신청 없이 행사 참여 매장에서 결제 시 즉시 차감됩니다.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Q. 반려동물 동물등록제는 꼭 해야 하나요?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>네, 동물보호법에 따라 2개월령 이상의 반려견은 의무 등록 대상입니다. 시·군·구청이나 동물병원(등록대행기관)에서 내장형 칩 또는 외장형 태그로 손쉽게 등록할 수 있으며, 유실·유기 방지와 건강관리에 필수적입니다.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Q. 청년농업인 영농정착지원금은 누가 받을 수 있나요?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>만 18세 이상 ~ 만 40세 미만의 독립경영 3년 이하 청년 농업인이 대상입니다. 선발 시 최장 3년간 월 최대 110만 원의 영농정착지원금과 농지 지원, 창업자금(최대 5억원 융자), 기술 교육 등을 종합적으로 지원합니다.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Q. 로컬푸드 직매장과 친환경 인증마크는 무엇을 의미하나요?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="accordion-body">
+            <p>로컬푸드는 해당 지역 농가에서 당일 수확·포장하여 유통거리를 획기적으로 줄인 신선한 먹거리입니다. 국가가 인증하는 유기농, 무농약, GAP(우수농산물관리) 인증마크를 확인하시면 더 안심하고 건강한 식탁을 꾸릴 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Details -->
+  <div class="modal" id="detailModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitle">상세 정책 안내</h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Content injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h4>대한민국 농림축산식품부 (MAFRA)</h4>
+        <p>세종특별자치시 다솜2로 94 (어진동) 정부세종청사 5동</p>
+        <p>정부민원안내 콜센터 국번없이 110 | 당직실 044-201-1111</p>
+        <p class="copyright">본 포털은 대국민 농식품부 주요 정책 이해를 돕기 위한 웹 서비스입니다.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.mafra.go.kr" target="_blank" rel="noopener">농식품부 공식 홈페이지 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a href="https://www.epis.or.kr" target="_blank" rel="noopener">농림수산식품교육문화정보원 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <a href="https://www.krei.re.kr" target="_blank" rel="noopener">한국농촌경제연구원 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
